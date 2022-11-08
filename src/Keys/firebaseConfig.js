@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyCrKHWwEMcuNi1Hz-iqEHUxV6fPcPhlhKU",
   authDomain: "dsw-2022-lucas.firebaseapp.com",
   projectId: "dsw-2022-lucas",
@@ -10,3 +10,4 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+

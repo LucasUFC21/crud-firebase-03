@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
 
-import {firebaseConfig} from '../keys/firebase_key'
+import {firebaseConfig} from '../Keys/firebaseConfig'
 
 class Firebase {
     
