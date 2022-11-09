@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
-import axios from "axios"
 
 import FirebaseContext from '../../utils/FirebaseContext'
 import StudentService from '../../services/StudentService'
@@ -33,17 +32,6 @@ const EditStudent = (props)=> {
                 },
                 params.id
             )
-            //console.log(params.id)
-            /*axios.get('http://localhost:3001/students/'+params.id)
-            .then(
-                (response)=>{
-                    //console.log(response.data.name)
-                    setName(response.data.name)
-                    setCourse(response.data.course)
-                    setIra(response.data.ira)
-                }
-            )
-            .catch((error)=>console.log(error))*/
         }
         ,
         []
@@ -60,13 +48,6 @@ const EditStudent = (props)=> {
             params.id,
             studentUpdated
         )
-        /*axios.put('http://localhost:3001/students/'+params.id,studentUpdated)
-        .then(
-            (response)=>{
-                navigate('/listStudent')
-            }
-        )
-        .catch((error=>console.log(error)))*/
     }
 
     return (

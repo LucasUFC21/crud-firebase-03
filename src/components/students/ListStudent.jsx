@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-//import { studentsList } from './data.js'
-import axios from 'axios'
 
 import FirebaseContext from '../../utils/FirebaseContext'
 import StudentService from '../../services/StudentService'
@@ -24,11 +22,9 @@ const ListStudent = (props) => {
             StudentService.list_on_snapshot(
                 props.firebase.getFirestoreDb(),
                 (students) => {
-                    //console.log(students)
                     setStudents(students)
                 }
             )
-            //console.log(props.firebase.getFirestoreDb())
         }
         ,
         []
@@ -50,7 +46,7 @@ const ListStudent = (props) => {
                    setReload(!reload)
                 },
                 id
-            )//delete
+            )
         }
     }
 
@@ -65,16 +61,11 @@ const ListStudent = (props) => {
                     setStudents(studentsResult)
                 },
                 id
-            )//delete
-        }//if
-    }//function
+            )
+        }
+    }
 
     const generateTableBody = () => {
-        /*return (
-            <div>
-                {JSON.stringify(studentsList)}
-            </div>
-        )*/
         return students.map(
             (element, index) => {
                 element.key = index
